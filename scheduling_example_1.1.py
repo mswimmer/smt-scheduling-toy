@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from z3 import *
+from z3 import Solver, IntVector, Sum, Or
 from print_all_solutions import get_all_solutions
 
 s = Solver()

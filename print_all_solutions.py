@@ -1,13 +1,13 @@
 import time
-from z3 import sat, is_array, Z3_UNINTERPRETED_SORT, Or
+from z3 import sat, is_array, Z3_UNINTERPRETED_SORT, Or, Z3Exception
 
 def get_all_solutions(s, limit = 0):
     result=[]
     while True:
-        start_time = time.clock()
+        start_time = time.time()
         if s.check() == sat:
             m = s.model()
-            print("Time for iteration {}: {}".format(len(result), time.clock() - start_time))
+            print("Time for iteration {}: {}".format(len(result), time.time() - start_time))
             #print(m)
             result.append(m)
             # Create a new constraint the blocks the current model

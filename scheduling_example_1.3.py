@@ -4,7 +4,7 @@
 Similar to scheduling_example_1.2 but with more shifts and heralds
 """
 
-from z3 import *
+from z3 import BoolVector, AtLeast, AtMost, Solver
 from print_all_solutions import get_all_solutions
 
 s = Solver()

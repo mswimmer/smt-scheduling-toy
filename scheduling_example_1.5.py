@@ -5,7 +5,7 @@ Similar to scheduling_example_1.4 but now we don't allow consecutive shifts
 
 """
 
-from z3 import *
+from z3 import Solver, BoolVector, AtLeast, AtMost, And, Not
 from print_all_solutions import get_all_solutions
 
 s = Solver()

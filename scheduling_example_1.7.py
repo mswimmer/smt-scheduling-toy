@@ -5,7 +5,7 @@ Similar to scheduling_example_1.6 but now certain heralds get preferential treat
 
 """
 
-from z3 import *
+from z3 import Solver, BoolVector, AtLeast, AtMost
 from print_all_solutions import get_all_solutions
 
 s = Solver()

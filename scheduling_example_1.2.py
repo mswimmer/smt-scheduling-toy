@@ -1,7 +1,7 @@
 #!/usr/bin/python
 """ Similar to scheduling_example_1.1 but with BoolVectors """
 
-from z3 import *
+from z3 import Solver, BoolVector, AtMost, AtLeast
 from print_all_solutions import get_all_solutions
 
 s = Solver()
@@ -28,4 +28,4 @@ for i_herald in range(n_heralds):
 print(s)
 results = get_all_solutions(s)
 print(results)
-assert len(results) == 6
+assert len(results[0]) == 6
